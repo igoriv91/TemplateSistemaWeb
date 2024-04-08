@@ -3,5 +3,14 @@
 @tailwind utilities;
 
 * {
-    @apply m-0 p-0 outline-0 box-border;
-  }
+  @apply m-0 p-0 outline-0 box-border text-primary;
+}
+
+input {
+  -moz-appearance: textfield;
+  @apply rounded-md bg-white border border-primary h-8 w-full px-2;
+}
+
+button {
+  @apply bg-primary p-2 h-12 rounded-md text-white text-lg hover:bg-secundary transition-all duration-300 w-52;
+}
