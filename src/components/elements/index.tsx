@@ -85,7 +85,7 @@ export function IconDefault(settings: PropsIcon) {
 
   return (
     <>
-      <a className={settings.className} onClick={() => settings.action}>{settings.icon}</a>
+      <a className={settings.className} onClick={settings.action}>{settings.icon}</a>
     </>
   );
 }
