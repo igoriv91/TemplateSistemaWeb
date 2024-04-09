@@ -15,7 +15,13 @@ type PropsButton = {
 
 type PropsLogo = {
   className?: string;
-  action?: Function;
+  action?: React.MouseEventHandler;
+};
+
+type PropsIcon = {
+  icon: React.ReactNode;
+  action?: React.MouseEventHandler;
+  className?: string;
 };
 
 export function InputDefault(settings: PropsInput) {
@@ -23,12 +29,12 @@ export function InputDefault(settings: PropsInput) {
     <>
       <label>
         {settings.label}
-        <div className="absolute ml-2 mt-2 ">{settings.icon}</div>
+        <div className="absolute ml-2 mt-2 " style={{'color':'white'}}>{settings.icon}</div>
         <input
-          className={`${settings.icon ? "pl-7 " + settings.className : settings.className }`}
+          className={`${settings.icon ? "pl-7 " + settings.className : settings.className}`}
           placeholder={settings.placeholder}
         ></input>
-        
+
       </label>
     </>
   );
@@ -71,6 +77,15 @@ export function LogoHorizontal(settings: PropsLogo) {
         className={settings.className}
         onClick={() => settings.action}
       />
+    </>
+  );
+}
+
+export function IconDefault(settings: PropsIcon) {
+
+  return (
+    <>
+      <a className={settings.className} onClick={() => settings.action}>{settings.icon}</a>
     </>
   );
 }
