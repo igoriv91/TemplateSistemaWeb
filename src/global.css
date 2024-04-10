@@ -8,9 +8,10 @@
 
 input {
   -moz-appearance: textfield;
+  appearance: textfield;
   @apply rounded-md bg-white border border-primary h-8 w-full px-2;
 }
 
 button {
-  @apply bg-primary p-2 h-12 rounded-md text-white text-lg hover:bg-secundary transition-all duration-300 w-52;
+  @apply bg-primary p-2 h-12 rounded-md text-white text-lg hover:bg-secundary transition-all duration-300;
 }

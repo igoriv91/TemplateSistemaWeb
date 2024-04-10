@@ -1,6 +1,6 @@
-import { ContainerCard } from "../../components/containers";
-import { IconDefault } from "../../components/elements";
-import Template from "../../components/template";
+import { ContainerCard } from "@/components/containers";
+import { IconDefault } from "@/components/elements";
+import Template from "@/components/template";
 import {
   FaDollarSign,
   FaUser,
